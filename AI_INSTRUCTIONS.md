@@ -74,6 +74,20 @@ Goal notes are the one exception to strict number-prefixing: because a goal usua
 
 Plain notes that aren't one of these four types (a daily note, a loose reference note) don't need a type marker — just a clear, descriptive filename.
 
+### Extended type markers (day-to-day templates)
+
+Beyond the four core types, this edition ships templates for a few more note shapes that come up often enough in real use to be worth a fixed pattern. These aren't "core" in the sense that the vault's structure depends on them, but they follow the same naming logic:
+
+| Type marker | Used for | Example filename |
+|---|---|---|
+| `.RESOURCE.` | A reference note — a guide, checklist, or curated collection with no `Status` and no `Todo` | `30.RESOURCE.portfolio-site-content-checklist.md` |
+| `.STATUSREVIEW.` | A dated snapshot of one specific project's health, filed alongside that project | `11.STATUSREVIEW.2026-01-31.refresh-portfolio-website.md` |
+| `.RHYTHM.` | A short, standing list of recurring personal practices — see the rule below, this one is never task-ified | `21.RHYTHM.weekly-personal-rhythms.md` |
+
+Three more day-to-day note shapes — weekly reviews, meeting notes, and quick-capture notes — follow the same "plain notes don't need a type marker" rule above instead: they're dated (or date-prefixed), live in their own root-level folders (`Weekly_reviews/`, `Meeting_notes/`, `00-09.Inbox/`), and don't carry a `.TYPE.` marker in the filename. Full templates for all six: `templates/`.
+
+**Rhythm notes are never task lists.** A `.RHYTHM.` note describes practices you return to (a weekly walk, an offline evening, a recurring check-in) — never convert its items into `- [ ]` checkboxes, never score or track completion against them, and never let a missed rhythm turn into backlog. If a rhythm note starts accumulating checkboxes, that's a sign it's quietly becoming an Area note, and the content should move there instead.
+
 ---
 
 ## Frontmatter conventions
@@ -147,5 +161,6 @@ If you ask an AI assistant to help organize, write, or file notes in this vault,
 ## Where to look next
 
 - Numbering scheme in depth: `30-39.Resources/30.general_and_templates/30.RESOURCE.johnny-decimal-numbering-guide.md`
-- The four starter templates: `templates/`
+- All ten starter templates: `templates/`
 - A worked example of each note type: see the README's "What's in the box" section
+- A longer, guided walkthrough (folder structure, all note types, task syntax, a first-week plan): `QUICKSTART.md` at the repository root

@@ -1,0 +1,6 @@
+# Build output — the packaged zip is never committed, only the script that builds it
+dist/
+
+# OS / editor cruft
+.DS_Store
+*.swp
