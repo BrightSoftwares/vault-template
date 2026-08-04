@@ -14,8 +14,12 @@ SECRET_PATTERNS='api[_-]?key\s*[:=]|secret\s*[:=]|password\s*[:=]|-----BEGIN [A-
 
 fail=0
 
+# Exclude this script itself: it necessarily contains the forbidden-term list
+# as a literal pattern string, which would otherwise match itself every run.
+SELF_PATH="scripts/red_content_scan.sh"
+
 echo "== Scanning tracked files for forbidden real names/brands =="
-matches=$(git ls-files | grep -v '^\.git' | xargs -I{} grep -nEi "$FORBIDDEN_TERMS" {} 2>/dev/null || true)
+matches=$(git ls-files | grep -v '^\.git' | grep -vFx "$SELF_PATH" | xargs -I{} grep -nEi "$FORBIDDEN_TERMS" {} 2>/dev/null || true)
 if [ -n "$matches" ]; then
   echo "FAIL: forbidden real-entity references found:"
   echo "$matches"
@@ -25,7 +29,7 @@ else
 fi
 
 echo "== Scanning tracked files for credential-shaped strings =="
-secrets=$(git ls-files | grep -v '^\.git' | xargs -I{} grep -nEi "$SECRET_PATTERNS" {} 2>/dev/null || true)
+secrets=$(git ls-files | grep -v '^\.git' | grep -vFx "$SELF_PATH" | xargs -I{} grep -nEi "$SECRET_PATTERNS" {} 2>/dev/null || true)
 if [ -n "$secrets" ]; then
   echo "FAIL: credential-shaped strings found:"
   echo "$secrets"
