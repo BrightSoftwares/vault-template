@@ -1,0 +1,15 @@
+name: RED-content gate
+
+on:
+  push:
+    branches: [main, claude/automated-work]
+  pull_request:
+    branches: [main]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run RED-content scan
+        run: ./scripts/red_content_scan.sh
