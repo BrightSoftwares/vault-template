@@ -1,11 +1,22 @@
-# PARA + Johnny Decimal Vault Template (Starter Edition)
+# Goshen — a PARA + Johnny Decimal Vault Template
 
 A ready-to-use [Obsidian](https://obsidian.md) vault skeleton that combines two well-known personal-knowledge-management methods:
 
 - **PARA** (Projects / Areas / Resources / Archives) — a method for organizing notes by *actionability* rather than by topic, popularized by Tiago Forte.
 - **Johnny Decimal** — a numbering scheme (`AA-BB.category-name/`, `AA.sub-area/`) that gives every folder a short, stable, sortable address so you always know where something lives.
 
-This Starter Edition is intentionally small but complete: one clean folder skeleton, a documented naming convention, ten ready-to-fill templates, and a small set of connected worked examples — all built around a fictional example business ("Brightline Studio") so you can see the whole system working together before you put your own life into it.
+Goshen is one product line shipped as a base edition plus add-on modules you buy as you need them. **This README describes the Starter Edition** — intentionally small but complete: one clean folder skeleton, a documented naming convention, ten ready-to-fill templates, and a small set of connected worked examples — all built around a fictional example business ("Brightline Studio") so you can see the whole system working together before you put your own life into it.
+
+## Editions & modules
+
+| Edition | What it adds on top of Starter |
+|---|---|
+| **Starter** | Nothing — this is the base edition described in this README |
+| **Solopreneur** | Business OS (revenue-gate pattern + `.COMPANY./.BRAND./.PRODUCT.` templates + ideas inventory) and Steering Pack (North Star/Waypoints + weekly scoreboard) — see `SOLOPRENEUR-ADDENDUM.md` |
+| Faith & Family | Rule of Life module — not yet built |
+| AI-Autopilot | Business OS + Automation Core + AI Copilot + Steering Pack — not yet fully built |
+
+Full module-by-module map and how each edition's zip is built from this one source repository: `MODULES.md`. If you bought Starter only, the rest of this README and its worked examples are everything included in your license — content described above under other editions lives in this same source repository but is not part of a Starter purchase (see `LICENSE.md`).
 
 ---
 
@@ -33,8 +44,11 @@ templates/                      All ten starter templates (see below)
 AI_INSTRUCTIONS.md              Instructions for an AI assistant working inside this vault
 QUICKSTART.md                   A full guided walkthrough — read this first
 LICENSE.md                      Usage terms for this template
-build_starter_zip.sh            Packages this repository into a single distributable zip
+MODULES.md                      Map of every module/edition this product line ships (Starter is BASE only)
+build_starter_zip.sh            Packages the Starter Edition into a single distributable zip
 ```
+
+Other editions add their own folders/templates on top of this tree without changing any file listed above — see `MODULES.md`.
 
 ### The ten templates
 
@@ -107,7 +121,7 @@ This is the smallest useful *complete* slice of a larger system: the folder skel
 
 ## Packaging this edition
 
-`build_starter_zip.sh` bundles this entire repository (folder tree, all ten templates, the demo project files, `QUICKSTART.md`, and the license) into a single `.zip` for distribution. Run it from the repository root:
+`build_starter_zip.sh` bundles exactly the Starter Edition's files (folder tree, all ten templates, the demo project files, `QUICKSTART.md`, and the license — never content from other editions, even though this source repository also holds those) into a single `.zip` for distribution. Run it from the repository root:
 
 ```bash
 ./build_starter_zip.sh

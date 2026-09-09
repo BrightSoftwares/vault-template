@@ -1,6 +1,6 @@
 # Templates
 
-Ten starter templates, covering the four core note types plus the six day-to-day templates most PARA + Johnny Decimal vaults end up needing within the first few weeks of real use.
+Ten starter templates, covering the four core note types plus the six day-to-day templates most PARA + Johnny Decimal vaults end up needing within the first few weeks of real use — plus five more templates (`10`–`14`) that ship with the Solopreneur edition's Business OS and Steering Pack modules. See `MODULES.md` at the repository root for which edition includes which.
 
 ## The four core types
 
@@ -21,6 +21,16 @@ Ten starter templates, covering the four core note types plus the six day-to-day
 | `07.TMPLT.review.project-status-review-template.md` | A `.STATUSREVIEW.` snapshot of a specific project |
 | `08.TMPLT.rhythm.personal-rhythms-template.md` | A `.RHYTHM.` note — recurring personal practices, never converted to tasks |
 | `09.TMPLT.capture.quick-capture-template.md` | A single loose Inbox capture note |
+
+## Business OS & Steering Pack templates (Solopreneur edition)
+
+| File | Produces |
+|---|---|
+| `10.TMPLT.company.company-foundation-template.md` | A `.COMPANY.` note — mission, values, who it's for |
+| `11.TMPLT.brand.brand-identity-template.md` | A `.BRAND.` note — voice, tone, visual notes |
+| `12.TMPLT.product.product-design-template.md` | A `.PRODUCT.` note — what you sell, to whom, at what price |
+| `13.TMPLT.northstar.north-star-and-waypoints-template.md` | A `.NORTHSTAR.` note — multi-year destination + Waypoints |
+| `14.TMPLT.review.weekly-scoreboard-template.md` | A weekly scoreboard — numbers-first companion to the weekly review |
 
 ## Using these with the Templater plugin
 
